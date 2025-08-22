@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assignment 2 Maurya Jadav</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="assign2.js"></script>
+    <script type="text/javascript" src="sphere_generation_new.js"></script>
+  </head>
+
+  <body onload="webGLStart();">
+    <h3>Assignment 2</h3>
+    <canvas
+      id="assignment2"
+      style="border: none"
+      width="1500"
+      height="500"
+    ></canvas>
+    <h4>Controls</h4>
+    <div class="sliders">
+      <label for="slider">camera zoom</label>
+      <input
+        autocomplete="off"
+        type="range"
+        min="0"
+        max="100"
+        value="25"
+        id="sliderId"
+      />
+      <br />
+      <label for="slider">light position</label>
+      <input
+        autocomplete="off"
+        type="range"
+        min="-20"
+        max="20"
+        value="0"
+        id="sliderId2"
+      />
+    </div>
+    <h3>Maurya Jadav 200567</h3>
+  </body>
+</html>

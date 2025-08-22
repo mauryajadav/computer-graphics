@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assignment 4 Maurya Jadav</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="assign4.js"></script>
+    <script type="text/javascript" src="generation.js"></script>
+  </head>
+
+  <body onload="webGLStart();">
+    <h3>Assignment 4</h3>
+    <canvas
+      id="assignment4"
+      style="border: none"
+      width="800"
+      height="800"
+    ></canvas>
+    <div>
+      <label for="fileInput">Select Background Image:</label>
+        <input type="file" id="backgroundInput" name="backgroundInput" accept=".png, .jpg, .jpeg" onchange="backgroundImage()">
+        <br>
+      <label for="fileInput">Select Foreground Image:</label>
+        <input type="file" id="foregroundInput" name="foregroundInput" accept=".png, .jpg, .jpeg" onchange="foregroundImage()">
+        <br>
+    </div>
+    <div>
+      <b>Image Mode:</b>
+      <input type="checkbox" id="background" onclick="backgroundChanger()" checked/>
+      <label for="background">Background Only</label>
+      <input type="checkbox" id="alpha" onclick="alphaChanger()"/>
+      <label for="alpha">Alpha Blended</label>
+    </div>
+    <div>
+      <input type="checkbox" id="gray" onclick="grayChanger()"/>
+      <label for="gray">Gray Scale</label>
+      <input type="checkbox" id="sepia" onclick="sepiaChanger()"/>
+      <label for="sepia">Sepia</label>
+    </div>
+    <div class="sliders">
+      <label for="slider">Contrast</label>
+      <input
+        autocomplete="off"
+        type="range"
+        min="-0.9"
+        max="0.9"
+        step="0.01"
+        value="0"
+        id="contrast"
+      />
+      <br />
+      <label for="slider">Brightness</label>
+      <input
+        autocomplete="off"
+        type="range"
+        min="-0.85"
+        max="0.85"
+        step="0.01"
+        value="0"
+        id="brightness"
+      />
+    </div>
+    <div>
+      <b>Process Background Image:</b>
+      <br>
+      <input type="checkbox" id="smooth" onclick="smoothChanger()"/>
+      <label for="smooth">Smooth</label>
+      <input type="checkbox" id="sharpen" onclick="sharpenChanger()"/>
+      <label for="sharpen">Sharpen</label>
+      <input type="checkbox" id="gradient" onclick="gradientChanger()"/>
+      <label for="gradient">Gradient</label>
+      <input type="checkbox" id="laplacian" onclick="laplacianChanger()"/>
+      <label for="laplacian">Laplacian</label>
+    </div>
+    <div>
+      <button onclick="reset()">Reset</button>
+      <button onclick="save()">Save</button>
+    </div>
+    <h3>Maurya Jadav 200567</h3>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assignment 5 Maurya Jadav</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="assign5.js"></script>
+    <script type="text/javascript" src="generation.js"></script>
+  </head>
+
+  <body onload="webGLStart();">
+    <h2>Assignment 5</h2>
+    <canvas
+      id="assignment5"
+      style="border: none"
+      width="800"
+      height="800"
+    ></canvas>
+    <br />
+    <button onclick="changeRender(0)">Phong</button>
+    <button onclick="changeRender(1)">Phong+Shadow</button>
+    <button onclick="changeRender(2)">Phong+Reflection</button>
+    <button onclick="changeRender(3)">Phong+Shadow+Reflection</button>
+    <div class="sliders">
+      <label for="slider">Bounce</label>
+      <input
+        autocomplete="off"
+        type="range"
+        min="1"
+        max="7"
+        value="1"
+        step="1"
+        id="sliderId"
+      />
+      <br />
+      <label for="slider">Light Position</label>
+      <input
+        autocomplete="off"
+        type="range"
+        min="-20"
+        max="20"
+        value="0"
+        id="sliderId2"
+      />
+    </div>
+    <h3>Maurya Jadav 200567</h3>
+  </body>
+</html>
